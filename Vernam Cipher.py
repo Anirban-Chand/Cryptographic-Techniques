@@ -85,7 +85,8 @@ if __name__ == '__main__':
     key = ''.join(random.choices(string.ascii_lowercase, k=len(message)))
 
     v = Vernam(text_message=message, key_value=key)
-    enmsg = v.encrypt_msg()
-    print('Encrypted Message: ', enmsg)
-    print('Decrypted Message: ' + v.decrypt_msg())
+    en_msg = v.encrypt_msg()
+    print('Encrypted Message: ', en_msg)
+    de_msg = v.decrypt_msg()
+    print('Decrypted Message: ' + de_msg)
     
